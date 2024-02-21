@@ -1,0 +1,241 @@
+::selection {
+    background-color: #dcf6cb;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.cart_container {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+header {
+    display: flex;
+    flex-flow: wrap;
+
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eeffe3;
+    height: 100%;
+}
+
+header img {
+    height: 5rem;
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+#naslovKategorije h1 {
+    font-weight: bold;
+    color: #e31fc2;
+}
+
+#funkcionalnosti {
+    display: flex;
+    align-items: center;
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+
+#funkcionalnosti img {
+    height: 2rem;
+}
+
+#funkcionalnosti a {
+    position: relative;
+}
+
+#funkcionalnosti #suma {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+}
+
+#suma {
+    position: relative;
+    top: 10px;
+    right: 10px;
+    font-size: 1vw;
+    border-radius: 50%;
+}
+
+.izbornik {
+    float: left;
+    width: 250px;
+}
+
+.Meni {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#tabovi {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#tabovi:hover {
+    background-color: rgba(255, 0, 208, 0.33);
+}
+
+.slike {
+    margin-left: 255px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#s {
+    width: calc(33.3% - 10px);
+    /*width: 300px;*/
+    margin-bottom: 20px;
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+#s:hover img {
+    visibility: visible;
+}
+
+
+#slika {
+    width: 100%;
+}
+
+#naziv {
+    margin: 10px 0;
+    font-size: 1.5vw;
+    text-align: center;
+    font-weight: bold;
+}
+
+#sl {
+    position: relative;
+}
+
+#sl img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+#sl #citat {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    font-style: italic;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(255, 0, 208, 0.33);
+}
+
+
+#preko {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    justify-content: center;
+    align-content: center;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.578);
+    border-radius: 20%;
+    visibility: hidden;
+}
+
+#preko1 {
+    display: flex;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.578);
+    border-radius: 20%;
+    /*visibility: hidden;*/
+}
+button{
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 1023px) {
+
+    .Body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slike {
+        order: 2;
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .izbornik {
+        order: 3;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #s {
+        order: 4;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 10px;
+        width: calc(50% - 10px);
+    }
+
+    #s>div {
+        width: 200px;
+        height: 150px;
+        background: white;
+        margin-top: 10px;
+        line-height: 150px;
+        text-align: center;
+        color: black;
+    }
+
+    #s>div:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    #sl #citat {
+        font-size: 2vw;
+        transform: translate(-50%, -20%);
+        padding: 5px;
+    }
+
+}

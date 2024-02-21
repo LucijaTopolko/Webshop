@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Košarica!</title>
+    <link rel="stylesheet" href="../../styles/kosarica.css">
+
+</head>
+
+<body>
+    <div class="cart_container">
+
+        <header>
+            <div>
+                <img src="../../images/logo.png" alt="Svijet biljaka">
+            </div>
+            <div id="naslovKategorije">
+                <h1>Košarica</h1>
+            </div>
+            <div id="funkcionalnosti">
+
+                <a href="/">
+                    <img id="klik" src="../../images/cart.ico" alt="cart">
+                    <% if (suma !=0) { %>
+                        <span id="suma">
+                            <%= suma %>
+                        </span>
+                        <% } %>
+                </a>
+
+                <img src="../../images/search.ico" alt="search">
+            </div>
+
+        </header>
+
+        <div class="kosarica">
+            <div class="row">
+                <h4>NAZIV PROIZVODA</h4>
+                <h4>KOLIČINA</h4>
+            </div>
+            <div id="proizvod_container">
+            </div>
+        </div>
+
+        <% for (let i=0; i < 50; i++) { %>
+            <% if (kolicine[i] !==0) { %>
+                <div class="proizvod">
+                    <div class="lijevo">
+                        <img src="../../images/<%= data.categories[Math.floor(i/5)].products[i%5].image %>">
+                        <h5>
+                            <%= data.categories[Math.floor(i/5)].products[i%5].name %>
+                        </h5>
+                    </div>
+                    <div class="desno">
+                        <form action="remove/<%= i  %>" method="POST"><button type="submit">-</button></form>
+                        <span>
+                            <%= kolicine[i] %>
+                        </span>
+                        <form action="add/<%= i  %>" method="POST"><button type="submit">+</button></form>
+                    </div>
+                </div>
+                <% } %>
+                    <% } %>
+
+    </div>
+</body>
+
+</html>

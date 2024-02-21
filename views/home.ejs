@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svijet biljaka</title>
+    <link rel="stylesheet" href="../styles/index.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div>
+                <img src="../images/logo.png" alt="Svijet biljaka">
+            </div>
+            <div id="naslovKategorije">
+                <h1>
+                    <%= naslovkat %>
+                </h1>
+            </div>
+            <div id="funkcionalnosti">
+                <a href="/cart/">
+                    <img id="klik" src="../images/cart.ico" alt="cart">
+                    <% if (suma !=0) { %>
+                        <span id="suma">
+                            <%= suma %>
+                        </span>
+                        <% } %>
+                </a>
+                <img src="../images/search.ico" alt="search">
+            </div>
+
+        </header>
+
+
+        <div class="izbornik">
+            <ul class="Meni">
+                <br>
+                <% for (var i=0; i < 10; i++) { %>
+                    <a href="/home/getProducts/<%= i %>">
+                        <li class="izbornik1" id="tabovi">
+                            <%= kategorije[i] %>
+                        </li>
+                    </a>
+                    <% } %>
+
+                        <br>
+                        <br>
+            </ul>
+            <ul class="Meni">
+                <li id="tabovi">Kontakt</li>
+                <li id="tabovi">Newsletter</li>
+                <li id="tabovi">Pretplati se</li>
+            </ul>
+        </div>
+
+        <div class="slike">
+
+            <div id="sl">
+                <img src="../images/header.jpg" alt="Slika">
+                <p id="citat">"Evo jednostavne tajne za sreću: uvijek posadi nešto. Kada brineš o biljkama, brineš o
+                    nečemu osim sebe.
+                    A kada brineš o nečemu osim sebe, tvoje srce se otvara." Oprah Winfrey</p>
+            </div>
+
+            <% for (var i=0; i < 5; i++) { %>
+                <div class="odabrani1" id="s">
+                    <img id="slika" src="../images/<%= slike[i] %>" alt="">
+                    <p class="naziv1" id="naziv">
+                        <%= imena[i] %>
+                    </p>
+
+                    <form action="/home/add/<%= kat*5+i %>" method="POST"><button><img id="preko"
+                                src="../images/cart.ico" alt="cart"></button>
+                    </form>
+                    <% if (kolicine[kat*5+i] !=0) { %>
+                        <span id="preko1">
+                            <%= kolicine[kat*5+i] %>
+                        </span>
+                        <% } %>
+
+                </div>
+                <% } %>
+
+
+                    <div class="odabrani6" id="s">
+                    </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

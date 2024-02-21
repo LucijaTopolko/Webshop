@@ -1,0 +1,128 @@
+html, body{
+    height: 100%;
+}
+
+
+.cart_container{
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+
+header {
+    display: flex;
+    flex-flow:wrap;
+
+    justify-content: space-between;
+     align-items: center;
+    background-color: #eeffe3;
+    height: 100%;
+}
+
+header img {
+    height: 5rem; 
+    padding-top: 5% ;
+    padding-left: 5%; 
+}
+
+#naslovKategorije h1 {    
+    font-weight: bold;
+    color: #e31fc2;
+}
+
+#funkcionalnosti {
+    display: flex;
+    align-items: center;
+    padding-top: 5% ;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+
+#funkcionalnosti img {
+    height: 2rem;
+}
+
+#funkcionalnosti a {
+    position:relative;
+}
+
+#funkcionalnosti #suma {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%,50%);
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+}
+
+#suma {
+    position: relative;
+    top:10px;
+    right:10px;
+    font-size: 1vw;
+    border-radius: 50%;
+}
+
+.kosarica {
+    padding:5%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row h4 {
+    margin:0;
+    flex-grow: 1;
+    text-align: center;
+    width: 50%;
+}
+
+.proizvod {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 0.5px solid pink;
+  padding: 5px;
+}
+
+.proizvod h5 {
+  margin: 0;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.proizvod img {
+  max-width: 50px;
+}
+
+.desno {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+    width: 50%;
+
+}
+
+.desno button {
+  margin: 0 5px;
+}
+
+.lijevo {
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+}
+
+#proizvod_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    border: 0.5px solid pink;
+
+}
